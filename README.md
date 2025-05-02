@@ -1,34 +1,56 @@
 # osu-mappack-creator
 
-An Electron application with Vue
+A cross-platform desktop app for creating osu! map packs, built with [electron-vite](https://electron-vite.org/)
 
-## Recommended IDE Setup
+## Usage Notice
+- **Do not select the entire `osu!/Songs` folder directly**, especially if it contains thousands of beatmaps. Doing so may cause the application to freeze or crash.
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- **Recommended usage:**
+Create a new folder on your computer to use as a workspace when creating map packs.
+Copy the required beatmap folders (each containing `.osu` files, audio, and image files) from `osu!/Songs` into this new folder.
+Then, select this folder in the application.
+- If you have any suggestions or feedback, feel free to contact me. [my osu! profile](https://osu.ppy.sh/users/26030234).
+
+## Project Structure (Simplified)
+```
+osu-mappack-creator/
+├── out/               # Electron build output
+├── src/               # Source code
+│   ├── main/          # Main process (Electron)
+│   └── renderer/      # Renderer process (Vue)
+├── public/            # Static assets
+├── package.json       # Project configuration
+└── ...
+```
 
 ## Project Setup
 
 ### Install
 
 ```bash
-$ npm install
+# Make sure you have Node.js and npm installed.
+npm install
 ```
 
 ### Development
 
 ```bash
-$ npm run dev
+# Launch the app in development mode with hot-reload:
+npm run dev
 ```
 
 ### Build
 
 ```bash
-# For windows
-$ npm run build:win
+# Build project only (no installer)
+npm run build:unpack
 
-# For macOS
-$ npm run build:mac
+# Build Windows installer
+npm run build:win
 
-# For Linux
-$ npm run build:linux
+# Build macOS installer
+npm run build:mac
+
+# Build Linux installer
+npm run build:linux
 ```
