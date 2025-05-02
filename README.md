@@ -2,6 +2,8 @@
 
 A cross-platform desktop app for creating osu! map packs, built with [electron-vite](https://electron-vite.org/)
 
+Click [here](https://github.com/1skyyks1/osu-mappack-creator/releases) to go to the Release page and download the latest version.
+
 ## Usage Notice
 - **Do not select the entire `osu!/Songs` folder directly**, especially if it contains thousands of beatmaps. Doing so may cause the application to freeze or crash.
 
@@ -9,7 +11,7 @@ A cross-platform desktop app for creating osu! map packs, built with [electron-v
 Create a new folder on your computer to use as a workspace when creating map packs.
 Copy the required beatmap folders (each containing `.osu` files, audio, and image files) from `osu!/Songs` into this new folder.
 Then, select this folder in the application.
-- **After creating the map pack**: you can find it in your workspace folder. You can compress it and change the file extension to .osz to use in osu!.
+- **After creating the map pack**, you can find it in your workspace folder. You can compress it and change the file extension to .osz to use in osu!.
 - If you have any suggestions or feedback, feel free to contact me. [my osu! profile](https://osu.ppy.sh/users/26030234).
 
 ## Project Structure (Simplified)
