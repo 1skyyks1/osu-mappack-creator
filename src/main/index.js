@@ -76,7 +76,7 @@ app.on('window-all-closed', () => {
 
 const getStaticDir = () => {
   return app.isPackaged
-    ? path.join(process.resourcesPath, 'static') // 打包后
+    ? path.join(process.resourcesPath, 'app.asar.unpacked/resources/static') // 打包后
     : path.join(__dirname, '../../resources/static') // 开发环境
 }
 
