@@ -163,7 +163,7 @@ ipcMain.handle('create-mapset', async (_, { osuPath, selectedBeatmaps, options }
       const newOsuName = `${options.mapsetName}(${beatmap.id}).osu`
       await fs.promises.writeFile(path.join(mapsetDir, newOsuName), newContent)
     } catch (error) {
-      console.error(`处理 ${beatmap.path} 失败:`, error)
+      console.error(`Load ${beatmap.path} failed`, error)
       throw error
     }
   }
