@@ -17,11 +17,10 @@ Then, select this folder in the application.
 ## Project Structure (Simplified)
 ```
 osu-mappack-creator/
-├── out/               # Electron build output
-├── src/               # Source code
+├── src/               
 │   ├── main/          # Main process (Electron)
 │   └── renderer/      # Renderer process (Vue)
-├── public/            # Static assets
+├── resources/         # Static assets
 ├── package.json       # Project configuration
 └── ...
 ```
