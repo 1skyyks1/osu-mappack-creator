@@ -181,7 +181,9 @@ ipcMain.handle('create-mapset', async (_, { osuPath, selectedBeatmaps, options }
           .replace(/Artist:[^\n]+/, `Artist:${options.artistName}`)
           .replace(/ArtistUnicode:[^\n]+/, `ArtistUnicode:${options.artistName}`)
           .replace(/Creator:[^\n]+/, `Creator:${options.mapsetCreator}`)
-        await fs.promises.writeFile(destFilePath, content)
+        let newOsuFileName = `${options.mapsetName}(delete).osu`
+        let filePath = path.join(mapsetDir, newOsuFileName)
+        await fs.promises.writeFile(filePath, content)
       } else {
         await fs.promises.copyFile(sourceFilePath, destFilePath)
       }
