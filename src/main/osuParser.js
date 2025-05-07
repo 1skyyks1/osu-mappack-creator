@@ -37,6 +37,8 @@ export function updateOsuFile(content, { options, beatmap, overrides }) {
     .replace(/Artist:[^\n]+/, `Artist:${options.artistName}`)
     .replace(/ArtistUnicode:[^\n]+/, `ArtistUnicode:${options.artistName}`)
     .replace(/Creator:[^\n]+/, `Creator:${options.mapsetCreator}`)
+    .replace(/HPDrainRate:[^\n]+/, `HPDrainRate:${options.hp}`)
+    .replace(/OverallDifficulty:[^\n]+/, `OverallDifficulty:${options.od}`)
     .replace(/Source:[^\n]+/, `Source:`)
     .replace(/Tags:[^\n]+/, `Tags:`)
     .replace(
